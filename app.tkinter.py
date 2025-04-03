@@ -211,7 +211,7 @@ class YdlpLogger:
 class DownloaderApp:
     def __init__(self, master):
         self.master = master
-        master.title("Yt Downloader GUI") # Changed title
+        master.title("Yt Downloader") # Changed title
         master.geometry("700x550") # Slightly increased height for log visibility
 
         # Set Icon if available

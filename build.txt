@@ -1,0 +1,7 @@
+pyinstaller --onefile --windowed --name YtDownloaderGUI ^
+            --version-file version_info.txt ^
+            --icon=YtDownloaderGUI.ico ^
+            --add-binary "ffmpeg_bin/ffmpeg.exe;." ^
+            --add-binary "ffmpeg_bin/ffprobe.exe;." ^
+            --add-data "YtDownloaderGUI.ico;." ^
+            app.tkinter.py

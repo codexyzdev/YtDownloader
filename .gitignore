@@ -1,0 +1,5 @@
+.venv
+build
+dist
+ffmpeg_bin
+cookies.txt

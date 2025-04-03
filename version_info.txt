@@ -31,7 +31,7 @@ VSVersionInfo(
         u'040904B0', # Language ID: U.S. English, Character Set: Unicode
         [StringStruct(u'CompanyName', u'Codexyzdev'), # <- PERSONALIZA AQUÍ
         StringStruct(u'FileDescription', u'Interfaz gráfica para descargar vídeos/audio'), # <- PERSONALIZA AQUÍ
-        StringStruct(u'FileVersion', u'1.0.0.0'), # <- Versión del archivo
+        StringStruct(u'FileVersion', u'1.0.0.1'), # <- Versión del archivo
         StringStruct(u'InternalName', u'YtDownloaderGUI'), # <- Nombre interno
         StringStruct(u'LegalCopyright', u'© 2025 Codexyzdev. Todos los derechos reservados.'), # <- PERSONALIZA AQUÍ
         StringStruct(u'OriginalFilename', u'YtDownloaderGUI.exe'), # <- Nombre original del archivo

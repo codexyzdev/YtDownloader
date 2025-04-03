@@ -3,3 +3,5 @@ build
 dist
 ffmpeg_bin
 cookies.txt
+app.tkinter.py
+__pycache__

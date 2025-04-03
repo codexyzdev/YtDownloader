@@ -6,33 +6,38 @@ A desktop application with a graphical interface for easily and quickly download
 
 ## Features
 
-- 🎥 Download videos in multiple formats (MP4, MKV, WEBM, AVI, FLV, MOV)
-- 🎵 Extract audio in MP3 format
-- 📁 Choose destination directory
-- 📊 Real-time progress bar
-- 📝 Detailed download logging
-- 🔄 Playlist support
-- 🎨 Intuitive graphical interface
+- 🎥 Download videos in multiple formats (MP4, MKV, WEBM)
+- 🎵 Extract audio in high-quality MP3 format (192kbps)
+- 📁 Smart directory management with last used directory memory
+- 📊 Detailed progress tracking with speed and ETA
+- 📝 Comprehensive logging system
+- 🔄 Playlist support with error handling
+- 🎨 Modern and intuitive graphical interface
+- 💾 Automatic settings persistence
+- 🔍 URL validation feedback
+- 📂 Quick access to download folder
+- 🛠️ Robust error handling and recovery
 
 ## Requirements
 
 - Python 3.6 or higher
 - FFmpeg (required for format conversion)
-- Required Python libraries:
-  - yt-dlp
-  - tkinter (included with Python)
+- Required Python packages (install via pip):
+
+  ```bash
+  pip install -r requirements.txt
+  ```
 
 ## Installation
 
 1. Clone or download this repository
+2. Install dependencies:
 
-1. Install dependencies:
+   ```bash
+   pip install yt-dlp
+   ```
 
-```bash
-pip install yt-dlp
-```
-
-1. Install FFmpeg:
+3. Install FFmpeg:
    - Windows: Download from [ffmpeg.org](https://ffmpeg.org/download.html) and add to PATH
    - Linux: `sudo apt-get install ffmpeg`
    - macOS: `brew install ffmpeg`
@@ -41,26 +46,55 @@ pip install yt-dlp
 
 1. Run the application:
 
-```bash
-python app.tkinter.py
-```
+   ```bash
+   python main.py
+   ```
 
-1. Paste the YouTube video URL
-1. Select desired format (MP3 or video)
-1. Choose destination directory
-1. Click "Download"
+2. Paste a YouTube URL (single video or playlist)
+3. Select desired format:
+   - Video: MP4, MKV, or WEBM (up to 1080p)
+   - Audio: MP3 (192kbps quality)
+4. Choose destination directory (automatically remembered)
+5. Click "Download" and monitor progress
 
-## Notes
+## Features in Detail
 
-- The application will automatically create the destination directory if it doesn't exist
-- Files are named according to the original video title
-- Cookie support included (optional) via `cookies.txt` file
+### Video Downloads
+
+- Supports multiple formats: MP4, MKV, WEBM
+- Smart format selection with quality up to 1080p
+- Automatic audio and video merging
+
+### Audio Extraction
+
+- High-quality MP3 conversion (192kbps)
+- Metadata preservation
+- Album art embedding when available
+
+### User Experience
+
+- Real-time download progress with speed and ETA
+- Detailed logging with error reporting
+- Last used directory remembering
+- Direct access to download folder
+- URL validation feedback
+
+### Advanced Features
+
+- Playlist support with individual file progress
+- Robust error handling and recovery
+- FFmpeg integration for reliable conversions
+- Settings persistence across sessions
 
 ## Troubleshooting
 
 - If FFmpeg is not installed, the application will show a warning at startup
-- Errors and important messages are shown in the log area
-- For download issues, verify your internet connection and URL validity
+- For download issues:
+  - Verify your internet connection
+  - Check URL validity
+  - Ensure FFmpeg is properly installed
+  - Review the log area for detailed error messages
+- The application automatically creates download directories if they don't exist
 
 ## License
 
@@ -68,8 +102,7 @@ This project is available as open source.
 
 ## Contributing
 
-Contributions are welcome. Please feel free to:
-
 - Report bugs
 - Suggest new features
 - Submit pull requests
+- Improve documentation

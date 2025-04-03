@@ -2,7 +2,7 @@
 
 
 a = Analysis(
-    ['app.tkinter.py'],
+    ['main.py'],
     pathex=[],
     binaries=[('ffmpeg_bin/ffmpeg.exe', '.'), ('ffmpeg_bin/ffprobe.exe', '.')],
     datas=[('YtDownloaderGUI.ico', '.')],

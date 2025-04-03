@@ -1,108 +1,123 @@
 # YtDownloader
 
-A desktop application with a graphical interface for easily and quickly downloading YouTube videos and audio.
+A modern, user-friendly desktop application for downloading YouTube videos and audio with a clean graphical interface. Built with Python and tkinter, it provides a seamless experience for downloading content in various formats.
 
 ![YtDownloader GUI](screenshots/app.png) *(Application screenshot)*
 
-## Features
+## Key Features
 
-- 🎥 Download videos in multiple formats (MP4, MKV, WEBM)
-- 🎵 Extract audio in high-quality MP3 format (192kbps)
-- 📁 Smart directory management with last used directory memory
-- 📊 Detailed progress tracking with speed and ETA
-- 📝 Comprehensive logging system
-- 🔄 Playlist support with error handling
-- 🎨 Modern and intuitive graphical interface
-- 💾 Automatic settings persistence
-- 🔍 URL validation feedback
-- 📂 Quick access to download folder
-- 🛠️ Robust error handling and recovery
+- Download videos in multiple formats (MP4, MKV, WEBM)
+- Extract high-quality audio (MP3 at 192kbps)
+- Real-time progress tracking with speed and ETA
+- Detailed logging system for troubleshooting
+- Playlist support with error handling
+- Modern, intuitive GUI with DPI awareness
+- Automatic settings persistence
+- Real-time URL validation
+- One-click access to download folder
 
-## Requirements
+## Quick Start
 
-- Python 3.6 or higher
-- FFmpeg (required for format conversion)
-- Required Python packages (install via pip):
+1. **Prerequisites**
+   - Python 3.6 or higher
+   - FFmpeg (required for format conversion)
 
-  ```bash
-  pip install -r requirements.txt
-  ```
-
-## Installation
-
-1. Clone or download this repository
-2. Install dependencies:
+2. **Installation**
 
    ```bash
-   pip install yt-dlp
+   # Clone the repository
+   git clone https://github.com/your-username/YtDownloader.git
+   cd YtDownloader
+
+   # Install dependencies
+   pip install -r requirements.txt
+
+   # Install FFmpeg:
+   # Windows: Download from ffmpeg.org and add to PATH
+   # Linux: sudo apt-get install ffmpeg
+   # macOS: brew install ffmpeg
    ```
 
-3. Install FFmpeg:
-   - Windows: Download from [ffmpeg.org](https://ffmpeg.org/download.html) and add to PATH
-   - Linux: `sudo apt-get install ffmpeg`
-   - macOS: `brew install ffmpeg`
-
-## Usage
-
-1. Run the application:
+3. **Run the Application**
 
    ```bash
    python main.py
    ```
 
-2. Paste a YouTube URL (single video or playlist)
-3. Select desired format:
-   - Video: MP4, MKV, or WEBM (up to 1080p)
-   - Audio: MP3 (192kbps quality)
-4. Choose destination directory (automatically remembered)
-5. Click "Download" and monitor progress
+## Usage
 
-## Features in Detail
+1. Launch the application
+2. Paste a YouTube URL (video or playlist)
+3. Choose your format:
+   - **Video**: MP4, MKV, or WEBM (up to 1080p)
+   - **Audio**: MP3 (192kbps)
+4. Select destination folder
+5. Click "Download" and track progress
 
-### Video Downloads
+## Technical Features
 
-- Supports multiple formats: MP4, MKV, WEBM
-- Smart format selection with quality up to 1080p
-- Automatic audio and video merging
+### Video Processing
+
+- Smart format selection prioritizing quality up to 1080p
+- Automatic audio-video stream merging
+- Multiple container format support (MP4, MKV, WEBM)
 
 ### Audio Extraction
 
 - High-quality MP3 conversion (192kbps)
 - Metadata preservation
-- Album art embedding when available
+- Album art embedding (when available)
 
 ### User Experience
 
-- Real-time download progress with speed and ETA
-- Detailed logging with error reporting
-- Last used directory remembering
-- Direct access to download folder
-- URL validation feedback
+- Windows DPI awareness for crisp display
+- Persistent settings across sessions
+- Real-time URL validation
+- Comprehensive error handling
+- Detailed logging system
 
 ### Advanced Features
 
-- Playlist support with individual file progress
-- Robust error handling and recovery
-- FFmpeg integration for reliable conversions
-- Settings persistence across sessions
+- Multi-threaded downloads
+- Progress tracking per file
+- FFmpeg integration
+- Playlist support
+- Automatic directory creation
 
 ## Troubleshooting
 
-- If FFmpeg is not installed, the application will show a warning at startup
-- For download issues:
-  - Verify your internet connection
-  - Check URL validity
-  - Ensure FFmpeg is properly installed
-  - Review the log area for detailed error messages
-- The application automatically creates download directories if they don't exist
+### Common Issues
 
-## License
+1. **FFmpeg Missing**
+   - Error: "FFmpeg/FFprobe not found in system PATH"
+   - Solution: Install FFmpeg and ensure it's in your system PATH
 
-This project is available as open source.
+2. **Download Fails**
+   - Check internet connection
+   - Verify URL is valid
+   - Review log area for specific error messages
+   - Ensure sufficient disk space
+
+3. **Format Issues**
+   - Verify FFmpeg installation
+   - Check if video is available in selected format
+   - Try alternative format if issues persist
 
 ## Contributing
 
+We welcome contributions! Here's how you can help:
+
 - Report bugs
-- Suggest new features
+- Suggest features
 - Submit pull requests
 - Improve documentation
+
+## License
+
+This project is open source and available under the MIT License.
+
+## Acknowledgments
+
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp) for the core download functionality
+- [FFmpeg](https://ffmpeg.org/) for media processing
+- All contributors and users of this project

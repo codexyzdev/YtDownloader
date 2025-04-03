@@ -3,7 +3,7 @@ import os
 import traceback
 import yt_dlp
 
-# --- Custom Logger Class (interno a este módulo) ---
+# --- Custom Logger Class (internal to this module) ---
 class _YdlpLogger:
     """Internal logger to route yt-dlp messages via callback."""
     def __init__(self, log_callback):

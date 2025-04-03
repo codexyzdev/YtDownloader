@@ -7,7 +7,7 @@ DEFAULT_SECTION = 'Settings'
 LAST_DIR_KEY = 'last_download_directory'
 
 def load_settings():
-    """Carga las configuraciones desde el archivo CONFIG_FILE."""
+    """Loads settings from the CONFIG_FILE."""
     config = configparser.ConfigParser()
     settings = {}
     if os.path.exists(CONFIG_FILE):
@@ -21,7 +21,7 @@ def load_settings():
     return settings
 
 def save_settings(settings):
-    """Guarda las configuraciones en el archivo CONFIG_FILE."""
+    """Saves settings to the CONFIG_FILE."""
     config = configparser.ConfigParser()
     config[DEFAULT_SECTION] = {}
     
@@ -34,17 +34,17 @@ def save_settings(settings):
     except IOError as e:
         print(f"Error writing config file {CONFIG_FILE}: {e}")
 
-# Ejemplo de uso (no se ejecuta directamente)
+# Usage example (not executed directly)
 if __name__ == '__main__':
-    # Cargar (o crear si no existe)
+    # Load (or create if it doesn't exist)
     current_settings = load_settings()
     print(f"Loaded settings: {current_settings}")
 
-    # Modificar y guardar
-    current_settings[LAST_DIR_KEY] = os.path.expanduser("~") # Ejemplo: guardar home
+    # Modify and save
+    current_settings[LAST_DIR_KEY] = os.path.expanduser("~") # Example: save home directory
     save_settings(current_settings)
     print("Saved settings.")
 
-    # Volver a cargar para verificar
+    # Reload to verify
     reloaded_settings = load_settings()
     print(f"Reloaded settings: {reloaded_settings}")

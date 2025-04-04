@@ -1,4 +1,4 @@
-pyinstaller --onefile --windowed --name YtDownloaderGUI ^
+pyinstaller --onefile --windowed --name YtDownloader-v1.0.0.1 ^
             --version-file version_info.txt ^
             --icon=YtDownloaderGUI.ico ^
             --add-binary "ffmpeg_bin/ffmpeg.exe;." ^
